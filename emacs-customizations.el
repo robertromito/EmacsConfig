@@ -6,6 +6,7 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(display-time-mode t)
+ '(global-linum-mode t)
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
