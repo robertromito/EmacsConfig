@@ -11,3 +11,4 @@
 (setq custom-file (expand-file-name "emacs-customizations.el" rmr-emacs-config-dir))
 (load custom-file)
 
+(server-start)
