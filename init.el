@@ -12,3 +12,6 @@
 (load custom-file)
 
 (server-start)
+
+; Org mode stuff
+(setq org-log-done t)
