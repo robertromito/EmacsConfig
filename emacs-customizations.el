@@ -7,6 +7,7 @@
  '(cua-mode t nil (cua-base))
  '(display-time-mode t)
  '(inhibit-startup-screen t)
+ '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(scroll-bar-mode nil)
  '(size-indication-mode t)
  '(tool-bar-mode nil))
