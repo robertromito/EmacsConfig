@@ -14,7 +14,7 @@
 
 ; Required packages
 (setq rmr-required-packages
-      (list 'magit 'ruby-end 'ruby-test-mode 'starter-kit-ruby 'inf-ruby))
+      (list 'magit 'ruby-end 'ruby-test-mode 'starter-kit-ruby 'inf-ruby 'rspec-mode 'ruby-compilation 'ruby-electric))
 (package-initialize)
 (dolist (package rmr-required-packages)
   (when (not (package-installed-p package))
@@ -23,11 +23,6 @@
 
 ; Stuff to set via config gui
 (server-start)
-
-; Org mode stuff
-(setq org-log-done t)
-(setq org-todo-keywords
-      '((sequence "TODO(t!)" "ACTIVE(a!)" "|" "DONE(d!)" "CANCELLED(c!)")))
 
 (global-set-key [M-left] 'windmove-left)          ; move to left windnow
 (global-set-key [M-right] 'windmove-right)        ; move to right window
