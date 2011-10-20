@@ -10,7 +10,7 @@
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
- '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
+ '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/") ("tromey" . "http://tromey.com/elpa/"))))
  '(scroll-bar-mode nil)
  '(size-indication-mode t)
  '(tool-bar-mode nil))

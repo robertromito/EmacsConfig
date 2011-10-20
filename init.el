@@ -1,3 +1,4 @@
+; Variables about the location of this file
 (setq rmr-emacs-init-file load-file-name)
 (setq rmr-emacs-config-dir
       (file-name-directory rmr-emacs-init-file))
@@ -12,3 +13,12 @@
 (load custom-file)
 
 (server-start)
+
+(setq org-todo-keywords
+      '((sequence "TODO(t!)" "ACTIVE(a!)" "|" "DONE(d!)" "CANCELLED(c!)")))
+
+(global-set-key [M-left] 'windmove-left)          ; move to left windnow
+(global-set-key [M-right] 'windmove-right)        ; move to right window
+(global-set-key [M-up] 'windmove-up)              ; move to upper window
+(global-set-key [M-down] 'windmove-down)          ; move to downer window
+
