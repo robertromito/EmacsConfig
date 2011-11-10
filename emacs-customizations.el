@@ -9,6 +9,7 @@
  '(electric-indent-mode t)
  '(electric-layout-mode t)
  '(electric-pair-mode t)
+ '(electric-pair-pairs (quote ((34 . 34) (124 . 124))))
  '(global-hl-line-mode t)
  '(global-linum-mode t)
  '(ido-enable-flex-matching t)
