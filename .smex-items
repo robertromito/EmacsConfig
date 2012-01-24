@@ -21,4 +21,6 @@
  (ruby-indent-line . 1)
  (scroll-up . 1)
  (package-list-packages . 1)
+ (ecb-activate . 3)
+ (ecb-minor-mode . 1)
 )
