@@ -14,7 +14,7 @@
 
 ; Required packages
 (setq rmr-required-packages
-      (list 'magit 'ruby-end 'ruby-test-mode 'starter-kit-ruby 'inf-ruby 'rspec-mode 'ruby-compilation 'ruby-electric))
+      (list 'magit 'ruby-end 'ruby-test-mode 'starter-kit-ruby 'inf-ruby 'rspec-mode 'ruby-compilation 'ruby-electric 'ecb))
 (package-initialize)
 (dolist (package rmr-required-packages)
   (when (not (package-installed-p package))

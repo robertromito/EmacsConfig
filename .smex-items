@@ -1,0 +1,24 @@
+
+;; ----- smex-history -----
+(
+ package-list-packages
+ scroll-up
+ ruby-mode
+ texinfo-format-buffer
+ server-force-delete
+ dired
+ fundamental-mode
+)
+
+;; ----- smex-data -----
+(
+ (fundamental-mode . 1)
+ (dired . 1)
+ (server-force-delete . 1)
+ (ruby-mode . 2)
+ (ruby-end-mode . 1)
+ (texinfo-format-buffer . 1)
+ (ruby-indent-line . 1)
+ (scroll-up . 1)
+ (package-list-packages . 1)
+)
