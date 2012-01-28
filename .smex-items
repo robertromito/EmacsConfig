@@ -2,12 +2,12 @@
 ;; ----- smex-history -----
 (
  package-list-packages
- scroll-up
+ speedbar
+ speedbar-frame-mode
+ eval-region
+ eval-buffer
  ruby-mode
- texinfo-format-buffer
- server-force-delete
  dired
- fundamental-mode
 )
 
 ;; ----- smex-data -----
@@ -20,7 +20,14 @@
  (texinfo-format-buffer . 1)
  (ruby-indent-line . 1)
  (scroll-up . 1)
- (package-list-packages . 1)
- (ecb-activate . 3)
- (ecb-minor-mode . 1)
+ (package-list-packages . 3)
+ (ecb-activate . 6)
+ (ecb-minor-mode . 6)
+ (eval-buffer . 2)
+ (eval-region . 1)
+ (ecb-byte-compile . 1)
+ (ecb-deactivate . 1)
+ (speedbar . 4)
+ (speedbar-frame-mode . 1)
+ (ruby-electric-mode . 3)
 )
