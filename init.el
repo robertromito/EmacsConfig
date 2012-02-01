@@ -14,8 +14,7 @@
 
 ; Required packages
 (setq rmr-required-packages
-      (list 'magit 'ruby-end))
-
+      (list 'magit 'ruby-end 'ruby-test-mode 'starter-kit-ruby 'inf-ruby 'rspec-mode 'ruby-compilation 'ruby-electric))
 (package-initialize)
 (dolist (package rmr-required-packages)
   (when (not (package-installed-p package))
@@ -24,9 +23,6 @@
 
 ; Stuff to set via config gui
 (server-start)
-
-; ECB Stuff
-(setq stack-trace-on-error t)
 
 (global-set-key [M-left] 'windmove-left)          ; move to left windnow
 (global-set-key [M-right] 'windmove-right)        ; move to right window
