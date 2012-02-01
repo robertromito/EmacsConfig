@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
+ '(custom-enabled-themes (quote (manoj-dark)))
  '(display-time-mode t)
  '(electric-indent-mode t)
  '(electric-layout-mode t)
