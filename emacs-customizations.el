@@ -6,7 +6,6 @@
  '(ansi-color-names-vector ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#ad7fa8" "#8cc4ff" "#eeeeec"])
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (manoj-dark)))
  '(display-time-mode t)
  '(electric-indent-mode t)
  '(electric-layout-mode t)

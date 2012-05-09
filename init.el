@@ -21,6 +21,9 @@
     (package-refresh-contents)
     (package-install package)))
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'rromito t)
+
 ; Stuff to set via config gui
 (server-start)
 
