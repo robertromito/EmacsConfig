@@ -14,7 +14,7 @@
 
 ; Required packages
 (setq rmr-required-packages
-      (list 'magit 'ruby-end))
+      (list 'magit 'ruby-end 'rinari 'flymake-ruby))
 (package-initialize)
 (dolist (package rmr-required-packages)
   (when (not (package-installed-p package))
@@ -31,3 +31,9 @@
 (global-set-key [M-right] 'windmove-right)        ; move to right window
 (global-set-key [M-up] 'windmove-up)              ; move to upper window
 (global-set-key [M-down] 'windmove-down)          ; move to downer window
+
+(split-window-horizontally)
+(other-window 1)
+(split-window-vertically)
+(other-window 1)
+(eshell)
