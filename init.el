@@ -33,7 +33,3 @@
 (global-set-key [M-down] 'windmove-down)          ; move to downer window
 
 (split-window-horizontally)
-(other-window 1)
-(split-window-vertically)
-(other-window 1)
-(eshell)
