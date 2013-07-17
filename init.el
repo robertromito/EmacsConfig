@@ -14,12 +14,15 @@
 
 ; Required packages
 (setq rmr-required-packages
-      (list 'magit 'ruby-end 'rinari 'flymake-ruby))
+      (list 'magit 'ruby-end 'rinari 'flymake-ruby 'evil))
 (package-initialize)
 (dolist (package rmr-required-packages)
   (when (not (package-installed-p package))
     (package-refresh-contents)
     (package-install package)))
+
+(require 'evil)
+(evil-mode 1)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'rromito t)
