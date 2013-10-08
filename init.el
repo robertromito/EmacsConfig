@@ -1,3 +1,8 @@
+; My technique for configuring emacs has been borrowed from
+; Mr. Avdi Grimm's Emacs Reboot blog series. 
+; Read more here: http://devblog.avdi.org/2011/08/08/emacs-reboot-1-beginnings/
+
+
 ; Variables about the location of this file
 (setq rmr-emacs-init-file load-file-name)
 (setq rmr-emacs-config-dir
@@ -12,10 +17,12 @@
 (setq backup-directory-alist
       (list (cons "." (expand-file-name "backup" user-emacs-directory))))
 
+; Initialize the package manager
+(package-initialize)
+
 ; Required packages
 (setq rmr-required-packages
-      (list 'magit 'ruby-end 'rinari 'flymake-ruby 'evil))
-(package-initialize)
+      (list 'magit 'ruby-end 'rinari 'flymake-ruby 'evil 'csharp-mode 'omnisharp 'company))
 (dolist (package rmr-required-packages)
   (when (not (package-installed-p package))
     (package-refresh-contents)
@@ -24,8 +31,8 @@
 (require 'evil)
 (evil-mode 1)
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'rromito t)
+;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;(load-theme 'rromito t)
 
 ; Stuff to set via config gui
 (server-start)
@@ -35,4 +42,6 @@
 (global-set-key [M-up] 'windmove-up)              ; move to upper window
 (global-set-key [M-down] 'windmove-down)          ; move to downer window
 
-
+; csharp stuff
+(add-hook 'csharp-mode-hook 'omnisharp-mode)
+(eval-after-load 'company '(add-to-list 'company-backends 'company-omnisharp))
