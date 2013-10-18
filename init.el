@@ -44,4 +44,6 @@
 
 ; csharp stuff
 (add-hook 'csharp-mode-hook 'omnisharp-mode)
+(add-hook 'csharp-mode-hook 'company-mode)
 (eval-after-load 'company '(add-to-list 'company-backends 'company-omnisharp))
+(global-set-key (kbd "C-'") 'company-complete-common)
