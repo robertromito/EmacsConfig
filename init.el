@@ -28,8 +28,12 @@
     (package-refresh-contents)
     (package-install package)))
 
+; eshell
+(load "~/.emacs.d/eshell/eshell.el")
+
 (require 'evil)
 (evil-mode 1)
+(setq show-paren-mode 1)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'rromito t)
