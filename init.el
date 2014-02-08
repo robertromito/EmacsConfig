@@ -52,3 +52,16 @@
 (add-hook 'csharp-mode-hook 'company-mode)
 (eval-after-load 'company '(add-to-list 'company-backends 'company-omnisharp))
 (global-set-key (kbd "C-'") 'company-complete-common)
+
+; git pcomplete stuff
+(defconst rmr-git-commands
+  '("add" "bisect" "branch" "checkout" "clone"
+    "commit" "diff" "fetch" "grep"
+    "init" "log" "merge" "mv" "pull" "push" "rebase"
+    "reset" "rm" "show" "status" "tag" )
+  "List of `git' commands")
+
+(defun pcomplete/git ()
+  "Completion for `git'"
+  (pcomplete-here* rmr-git-commands))
+
