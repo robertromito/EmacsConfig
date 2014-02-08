@@ -36,15 +36,17 @@
 	     (git-output (shell-command-to-string (concat git-cmd " | " grep-cmd " | " sed-cmd))))
 	(concat "["
 		(if (> (length git-output) 0)
-		    (substring git-output 0 -1)
+		    (propertize (substring git-output 0 -1) 'face '(:foreground "blue"))
 		  "(no branch)")
-		"] ") ) ""))
+		"] ") )
+    "")
+  )
 
 (defun rmr-eshell-prompt-fn ()
   (concat
-   (propertize (cur-dir-git-branch-string (eshell/pwd)) 'face '(:foreground "green"))
+   (cur-dir-git-branch-string (eshell/pwd)) 
    (pwd-shorten-dirs (pwd-replace-home (eshell/pwd)))
-   " $ "))
+   " $ " ))
 
 (setq eshell-prompt-regexp "^[^#$]*[#$] ")
 (setq eshell-prompt-function 'rmr-eshell-prompt-fn)
