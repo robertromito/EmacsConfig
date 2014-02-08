@@ -36,7 +36,7 @@
 	     (git-output (shell-command-to-string (concat git-cmd " | " grep-cmd " | " sed-cmd))))
 	(concat "["
 		(if (> (length git-output) 0)
-		    (propertize (substring git-output 0 -1) 'face '(:foreground "blue"))
+		    (propertize (substring git-output 0 -1) 'face '(:foreground "yellow"))
 		  "(no branch)")
 		"] ") )
     "")
