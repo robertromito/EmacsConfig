@@ -26,6 +26,12 @@
                  p-lst
                  "/"))))
 
+(defun git-prompt-color ()
+  (if (> (length (shell-command-to-string "git status -s")) 0) 
+      "red"
+    "green")
+  )
+
 (defun cur-dir-git-branch-string (pwd)
   (interactive)
   (if (and (eshell-search-path "git")
@@ -33,10 +39,11 @@
       (let* ((git-cmd "git branch")
 	     (grep-cmd "grep '\\*'")
 	     (sed-cmd "sed -e 's/^\\* //'")
-	     (git-output (shell-command-to-string (concat git-cmd " | " grep-cmd " | " sed-cmd))))
+	     (git-output (shell-command-to-string (concat git-cmd " | " grep-cmd " | " sed-cmd)))
+	     )
 	(concat "["
 		(if (> (length git-output) 0)
-		    (propertize (substring git-output 0 -1) 'face '(:foreground "yellow"))
+		    (propertize (substring git-output 0 -1) 'face `(:foreground ,(git-prompt-color)))
 		  "(no branch)")
 		"] ") )
     "")

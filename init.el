@@ -84,3 +84,5 @@
    ;; provide branch completion for the command `checkout'.
    ((pcomplete-match "checkout" 1)
     (pcomplete-here* (rmr-git-get-refs "heads")))))  
+
+
