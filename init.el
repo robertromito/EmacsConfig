@@ -86,3 +86,6 @@
     (pcomplete-here* (rmr-git-get-refs "heads")))))  
 
 
+;; Windows specific customizations
+(when (eq system-type 'windows-nt)
+  (setq-default comint-process-echoes 'on))
