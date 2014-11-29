@@ -22,7 +22,7 @@
 
 ; Required packages
 (setq rmr-required-packages
-      (list 'magit 'ruby-end 'rinari 'flymake-ruby 'evil 'csharp-mode 'omnisharp 'company))
+      (list 'magit 'ruby-end 'flymake-ruby 'evil 'csharp-mode 'omnisharp 'company))
 (dolist (package rmr-required-packages)
   (when (not (package-installed-p package))
     (package-refresh-contents)
@@ -37,6 +37,7 @@
 
 ;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;(load-theme 'rromito t)
+(setq ns-use-srgb-colorspace t)
 
 ; Stuff to set via config gui
 (server-start)
