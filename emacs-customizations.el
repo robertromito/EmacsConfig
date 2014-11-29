@@ -20,7 +20,7 @@
  '(org-clock-report-include-clocking-task t)
  '(org-log-into-drawer t)
  '(org-todo-keywords (quote ((sequence "TODO(t!)" "ACTIVE(a!)" "|" "DONE(d!)" "CANCELLED(c!)"))))
- '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/")("org" . "http://orgmode.org/elpa"))))
+ '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "https://marmalade-repo.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/") ("org-mode" . "http://orgmode.org/elpa"))))
  '(scroll-bar-mode nil)
  '(server-mode t)
  '(server-use-tcp t)
