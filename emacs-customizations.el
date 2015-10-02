@@ -3,9 +3,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#ad7fa8" "#8cc4ff" "#eeeeec"])
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#ad7fa8" "#8cc4ff" "#eeeeec"])
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
+ '(custom-enabled-themes (quote (wheatgrass)))
  '(display-time-mode t)
  '(electric-indent-mode t)
  '(electric-layout-mode t)
@@ -19,8 +23,15 @@
  '(org-clock-persist (quote clock))
  '(org-clock-report-include-clocking-task t)
  '(org-log-into-drawer t)
- '(org-todo-keywords (quote ((sequence "TODO(t!)" "ACTIVE(a!)" "|" "DONE(d!)" "CANCELLED(c!)"))))
- '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "https://marmalade-repo.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/") ("org-mode" . "http://orgmode.org/elpa"))))
+ '(org-todo-keywords
+   (quote
+    ((sequence "TODO(t!)" "ACTIVE(a!)" "|" "DONE(d!)" "CANCELLED(c!)"))))
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("marmalade" . "https://marmalade-repo.org/packages/")
+     ("melpa" . "http://melpa.milkbox.net/packages/")
+     ("org-mode" . "http://orgmode.org/elpa"))))
  '(scroll-bar-mode nil)
  '(server-mode t)
  '(server-use-tcp t)
