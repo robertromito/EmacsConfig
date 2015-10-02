@@ -90,3 +90,7 @@
 ;; Windows specific customizations
 (when (eq system-type 'windows-nt)
   (setq-default comint-process-echoes 'on))
+
+;; OSX specific customizations
+(when (eq system-type 'darwin)
+  (setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH"))))
