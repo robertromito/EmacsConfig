@@ -9,7 +9,10 @@
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#ad7fa8" "#8cc4ff" "#eeeeec"])
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (wheatgrass)))
+ '(custom-enabled-themes (quote (seti)))
+ '(custom-safe-themes
+   (quote
+    ("94ba29363bfb7e06105f68d72b268f85981f7fba2ddef89331660033101eb5e5" default)))
  '(display-time-mode t)
  '(electric-indent-mode t)
  '(electric-layout-mode t)
