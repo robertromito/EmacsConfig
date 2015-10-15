@@ -22,7 +22,7 @@
 
 ; Required packages
 (setq rmr-required-packages
-      (list 'magit 'ruby-end 'flymake-ruby 'evil 'csharp-mode 'omnisharp 'company))
+      (list 'magit 'ruby-end 'flymake-ruby 'evil 'csharp-mode 'omnisharp 'company 'seti-theme))
 (dolist (package rmr-required-packages)
   (when (not (package-installed-p package))
     (package-refresh-contents)
@@ -30,6 +30,9 @@
 
 ; eshell
 (load "~/.emacs.d/eshell/eshell.el")
+
+; themes
+(load-theme 'seti t)
 
 (require 'evil)
 (evil-mode 1)
