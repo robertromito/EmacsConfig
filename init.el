@@ -22,7 +22,7 @@
 
 ; Required packages
 (setq rmr-required-packages
-      (list 'magit 'ruby-end 'flymake-ruby 'evil 'csharp-mode 'omnisharp 'company 'seti-theme))
+      (list 'magit 'ruby-end 'flycheck 'flymake-ruby 'evil 'web-mode 'jsx-mode 'seti-theme))
 (dolist (package rmr-required-packages)
   (when (not (package-installed-p package))
     (package-refresh-contents)
@@ -51,11 +51,33 @@
 (global-set-key [M-down] 'windmove-down)          ; move to downer window
 (global-set-key (kbd "<C-tab>") 'next-buffer)
 
-; csharp stuff
-(add-hook 'csharp-mode-hook 'omnisharp-mode)
-(add-hook 'csharp-mode-hook 'company-mode)
-(eval-after-load 'company '(add-to-list 'company-backends 'company-omnisharp))
-(global-set-key (kbd "C-'") 'company-complete-common)
+; JSX stuff
+(require 'flycheck)
+
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+(defadvice web-mode-highlight-part (around tweak-jsx activate)
+  (if (equal web-mode-content-type "jsx")
+      (let ((web-mode-enable-part-face nil))
+	ad-do-it)
+    ad-do-it))
+(require 'jsx-mode)
+
+(flycheck-define-checker jsxhint-checker
+  "A JSX syntax and style checker based on JSXHint."
+
+  :command ("jsxhint" source)
+  :error-patterns
+  ((error line-start (1+ nonl) ": line " line ", col " column ", " (message) line-end))
+  :modes (web-mode))
+(add-hook 'web-mode-hook
+          (lambda ()
+            (when (equal web-mode-content-type "jsx")
+              ;; enable flycheck
+              (flycheck-select-checker 'jsxhint-checker)
+              (flycheck-mode))))
+
+(add-hook 'jsx-mode-hook
+          (lambda () (auto-complete-mode 1)))
 
 ; git pcomplete stuff
 (defconst rmr-git-commands
