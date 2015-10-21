@@ -51,6 +51,20 @@
 (global-set-key [M-down] 'windmove-down)          ; move to downer window
 (global-set-key (kbd "<C-tab>") 'next-buffer)
 
+(setq-default indent-tabs-mode nil)
+(desktop-save-mode 1)
+
+; Web mode stuff
+(add-hook 'web-mode-hook
+          (lambda ()
+            (setq web-mode-markup-indent-offset 2)
+            (setq web-mode-css-indent-offset 2)
+            (setq web-mode-code-indent-offset 2)
+            (when (equal web-mode-content-type "jsx")
+              ;; enable flycheck
+              (flycheck-select-checker 'jsxhint-checker)
+              (flycheck-mode))))
+
 ; JSX stuff
 (require 'flycheck)
 
@@ -69,12 +83,6 @@
   :error-patterns
   ((error line-start (1+ nonl) ": line " line ", col " column ", " (message) line-end))
   :modes (web-mode))
-(add-hook 'web-mode-hook
-          (lambda ()
-            (when (equal web-mode-content-type "jsx")
-              ;; enable flycheck
-              (flycheck-select-checker 'jsxhint-checker)
-              (flycheck-mode))))
 
 (add-hook 'jsx-mode-hook
           (lambda () (auto-complete-mode 1)))
