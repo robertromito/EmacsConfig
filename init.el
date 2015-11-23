@@ -32,7 +32,7 @@
 (load "~/.emacs.d/eshell/eshell.el")
 
 ; themes
-(load-theme 'seti t)
+(load-theme 'leuven t)
 
 (require 'evil)
 (evil-mode 1)
