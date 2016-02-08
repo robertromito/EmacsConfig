@@ -1,1 +1,2 @@
 alias ff find-file $1
+alias t '/usr/local/bin/todo.sh -t -d ~/pwiki/.todo.cfg'

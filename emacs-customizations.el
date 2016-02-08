@@ -35,6 +35,9 @@
      ("marmalade" . "https://marmalade-repo.org/packages/")
      ("melpa" . "http://melpa.milkbox.net/packages/")
      ("org-mode" . "http://orgmode.org/elpa"))))
+ '(package-selected-packages
+   (quote
+    (seti-theme jsx-mode web-mode evil flymake-ruby flycheck ruby-end magit)))
  '(scroll-bar-mode nil)
  '(server-mode t)
  '(server-use-tcp t)
